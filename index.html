@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Adittya Wira Satnaji - Junior Network Engineer & IT Support">
+    <title>Adittya Wira Satnaji | Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">Adittya</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#certificates" class="nav-link">Certificates</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <i class="bx bx-network-chart"></i>
+                <span>Available for Work</span>
+            </div>
+            
+            <h1 class="hero-name reveal">
+                Adittya Wira Satnaji
+            </h1>
+            
+            <div class="hero-role reveal">
+                <span class="role-prefix">I'm a </span>
+                <span class="typing-text" id="typing-text"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            
+            <p class="hero-desc reveal">
+                Fresh Graduate TKJ dari SMKN 54 Jakarta yang memiliki minat dan kemampuan di bidang networking, hardware, dan technical support. Memiliki pengalaman praktik serta PKL di dunia IT, dengan kemampuan troubleshooting, instalasi perangkat, dan konfigurasi jaringan dasar. Siap bekerja, belajar, dan berkembang di lingkungan profesional bidang teknologi informasi.
+            </p>
+            
+            <div class="hero-buttons reveal">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="bx bx-message-dots"></i>
+                    <span>Contact Me</span>
+                </a>
+                <a href="assets/cv/CV-Adittya-Wira-Satnaji.pdf" class="btn btn-secondary" download="CV-Adittya-Wira-Satnaji.pdf">
+                    <i class="bx bx-download"></i>
+                    <span>Download CV</span>
+                </a>
+            </div>
+            
+            <div class="hero-stats reveal">
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Skill Categories</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">Skills Mastered</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Certificates</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Get to Know Me</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <div class="image-wrapper">
+                        <img src="assets/profile/foto-adittya.jpeg" alt="Adittya Wira Satnaji" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">
+                            <i class="bx bx-user"></i>
+                            <span>Profile Photo</span>
+                        </div>
+                        <div class="image-border"></div>
+                        <div class="image-glow"></div>
+                    </div>
+                    <div class="about-badges">
+                        <div class="badge-item">
+                            <i class="bx bxs-graduation"></i>
+                            <span>SMKN 54 Jakarta</span>
+                        </div>
+                        <div class="badge-item">
+                            <i class="bx bx-server"></i>
+                            <span>Fresh Graduate TKJ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-content reveal">
+                    <h3 class="about-heading">
+                        Passionate about building and maintaining network infrastructure
+                    </h3>
+                    
+                    <p class="about-text">
+                        Saya adalah Fresh Graduate Teknik Komputer dan Jaringan dari SMKN 54 Jakarta yang memiliki ketertarikan besar di bidang networking, hardware, dan technical support. Selama masa pembelajaran dan praktik kerja lapangan (PKL), saya telah memperoleh pengalaman dalam troubleshooting perangkat komputer dan jaringan, instalasi sistem operasi, konfigurasi perangkat jaringan dasar, serta penanganan perangkat IT secara langsung.
+                    </p>
+                    
+                    <p class="about-text">
+                        Saya memiliki kemampuan untuk bekerja dengan teliti, cepat beradaptasi, dan mampu belajar teknologi baru secara mandiri. Fokus utama saya berada pada pengembangan skill di bidang IT infrastructure, network support, dan problem solving teknis untuk membantu menciptakan sistem yang stabil dan efisien.
+                    </p>
+                    
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="bx bx-school"></i>
+                            <div class="info-content">
+                                <span class="info-label">Education</span>
+                                <span class="info-value">SMKN 54 Jakarta - TKJ</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="bx bx-target-lock"></i>
+                            <div class="info-content">
+                                <span class="info-label">Focus Area</span>
+                                <span class="info-value">Networking & Hardware</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="bx bx-map"></i>
+                            <div class="info-content">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Jakarta, Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">My Skills</span>
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-desc">Kemampuan teknis yang telah saya kembangkan melalui pembelajaran dan praktik langsung</p>
+            </div>
+            
+            <div class="skills-grid" id="skills-container">
+                <!-- Skills akan di-render oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Experience</span>
+                <h2 class="section-title">Work History</h2>
+            </div>
+            
+            <div class="experience-content">
+                <div class="timeline reveal">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="bx bx-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="exp-header">
+                                    <div class="exp-company">
+                                        <div class="company-logo">
+                                            <i class="bx bx-buildings"></i>
+                                        </div>
+                                        <div class="company-info">
+                                            <h3>Central Technology Computer</h3>
+                                            <span class="exp-position">PKL - Technical Support</span>
+                                        </div>
+                                    </div>
+                                    <span class="exp-date">2024</span>
+                                </div>
+                                
+                                <div class="exp-body">
+                                    <p class="exp-desc">
+                                        Melakukan praktik kerja lapangan sebagai Technical Support dengan fokus pada perakitan PC, troubleshooting perangkat, dan penanganan perangkat client.
+                                    </p>
+                                    
+                                    <div class="exp-tasks">
+                                        <h4>Responsibilities:</h4>
+                                        <ul>
+                                            <li>
+                                                <i class="bx bx-check-circle"></i>
+                                                <span>Aktivasi laptop dan instalasi sistem operasi</span>
+                                            </li>
+                                            <li>
+                                                <i class="bx bx-check-circle"></i>
+                                                <span>Perakitan PC sesuai kebutuhan client</span>
+                                            </li>
+                                            <li>
+                                                <i class="bx bx-check-circle"></i>
+                                                <span>Troubleshooting perangkat hardware dan software</span>
+                                            </li>
+                                            <li>
+                                                <i class="bx bx-check-circle"></i>
+                                                <span>Penanganan dan maintenance perangkat client</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-section reveal">
+                    <h3 class="gallery-title">PKL Gallery</h3>
+                    <div class="gallery-grid" id="pkl-gallery">
+                        <!-- Gallery items akan di-render oleh JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates section" id="certificates">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Certificates</span>
+                <h2 class="section-title">Achievements & Certifications</h2>
+            </div>
+            
+            <div class="cert-grid" id="cert-container">
+                <!-- Certificates akan di-render oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-desc">Saya selalu terbuka untuk peluang baru dan kolaborasi. Jangan ragu untuk menghubungi saya.</p>
+            </div>
+            
+            <div class="contact-grid reveal">
+                <a href="https://wa.me/qr/CBNBUU6DM7WWC1" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon whatsapp">
+                        <i class="bx bxl-whatsapp"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>WhatsApp</h3>
+                        <p>Chat with me directly</p>
+                    </div>
+                    <i class="bx bx-link-external contact-arrow"></i>
+                </a>
+                
+                <a href="mailto:adittiawira04@gmail.com" class="contact-card">
+                    <div class="contact-icon email">
+                        <i class="bx bx-envelope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <p>adittiawira04@gmail.com</p>
+                    </div>
+                    <i class="bx bx-link-external contact-arrow"></i>
+                </a>
+                
+                <a href="https://id.linkedin.com/in/adittya-wira-satnaji-365a223b3" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon linkedin">
+                        <i class="bx bxl-linkedin"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>LinkedIn</h3>
+                        <p>Connect professionally</p>
+                    </div>
+                    <i class="bx bx-link-external contact-arrow"></i>
+                </a>
+                
+                <a href="https://www.instagram.com/adittyyy_a" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Instagram</h3>
+                        <p>@adittyyy_a</p>
+                    </div>
+                    <i class="bx bx-link-external contact-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Adittya</span>
+                    <p class="footer-tagline">Building the future of network infrastructure</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>2026 Adittya Wira Satnaji. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Preview Modal -->
+    <div class="modal" id="image-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">
+                <i class="bx bx-x"></i>
+            </button>
+            <img src="" alt="Preview" id="modal-image">
+            <p class="modal-title" id="modal-title"></p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
