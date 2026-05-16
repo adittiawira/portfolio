@@ -384,6 +384,49 @@
         </div>
     </div>
 
+        <!-- ... kode sebelumnya ... -->
+
+    <!-- Image Preview Modal (Yang sudah ada) -->
+    <div class="modal" id="image-modal">
+        <!-- ... isi tetap sama ... -->
+    </div>
+
+    <!-- PDF Viewer Modal (TAMBAHKAN INI) -->
+    <div class="pdf-modal" id="pdf-modal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 class="pdf-modal-title" id="pdf-modal-title">Certificate Preview</h3>
+                <div class="pdf-modal-actions">
+                    <a href="#" class="pdf-btn-tab" id="pdf-btn-tab" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bx-tab'></i>
+                        <span>Open Tab</span>
+                    </a>
+                    <button class="pdf-modal-close" id="pdf-modal-close" aria-label="Close PDF Preview">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="pdf-viewer-container">
+                <!-- Loading State -->
+                <div class="pdf-loading" id="pdf-loading">
+                    <div class="spinner"></div>
+                    <p>Loading PDF...</p>
+                </div>
+                <!-- Error State -->
+                <div class="pdf-error" id="pdf-error" style="display: none;">
+                    <i class='bx bx-file-blank'></i>
+                    <h4>Preview Not Available</h4>
+                    <p>Unable to load PDF file. Please use the button below to view.</p>
+                    <a href="#" class="btn btn-primary" id="pdf-fallback-link" target="_blank">
+                        Open PDF in New Tab
+                    </a>
+                </div>
+                <!-- PDF Iframe -->
+                <iframe id="pdf-iframe" title="PDF Preview" style="display: none;"></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="script.js"></script>
 </body>

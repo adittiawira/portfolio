@@ -322,7 +322,7 @@ function toggleSkillCard(index) {
 }
 
 /* ========================================
-   Render Certificates
+   Render Certificates (UPDATED)
 ======================================== */
 function renderCertificates() {
     certContainer.innerHTML = certificatesData.map((cert, index) => `
@@ -340,10 +340,10 @@ function renderCertificates() {
                 <h3 class="cert-title">${cert.title}</h3>
                 <p class="cert-issuer">${cert.issuer}</p>
                 <div class="cert-actions">
-                    <a href="${cert.pdf}" class="cert-btn cert-btn-primary" target="_blank">
-                        <i class="bx bx-file"></i>
-                        <span>View PDF</span>
-                    </a>
+                    <button class="cert-btn cert-btn-primary" onclick="openPdfViewer('${cert.pdf}', '${cert.title}')">
+                        <i class="bx bx-show"></i>
+                        <span>View</span>
+                    </button>
                     <a href="${cert.pdf}" class="cert-btn cert-btn-secondary" download>
                         <i class="bx bx-download"></i>
                         <span>Download</span>
@@ -352,6 +352,84 @@ function renderCertificates() {
             </div>
         </div>
     `).join('');
+}
+
+/* ========================================
+   PDF Viewer Functions
+======================================== */
+const pdfModal = document.getElementById('pdf-modal');
+const pdfIframe = document.getElementById('pdf-iframe');
+const pdfLoading = document.getElementById('pdf-loading');
+const pdfError = document.getElementById('pdf-error');
+const pdfModalClose = document.getElementById('pdf-modal-close');
+const pdfBtnTab = document.getElementById('pdf-btn-tab');
+const pdfFallbackLink = document.getElementById('pdf-fallback-link');
+const pdfTitle = document.getElementById('pdf-modal-title');
+
+function openPdfViewer(pdfUrl, title) {
+    // Reset state
+    pdfIframe.style.display = 'none';
+    pdfError.style.display = 'none';
+    pdfLoading.style.display = 'flex';
+    
+    // Set title and links
+    pdfTitle.textContent = title;
+    pdfBtnTab.href = pdfUrl;
+    pdfFallbackLink.href = pdfUrl;
+    
+    // Show modal
+    pdfModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Load PDF
+    pdfIframe.src = pdfUrl;
+    
+    // Handle Iframe Load Events
+    pdfIframe.onload = function() {
+        pdfLoading.style.display = 'none';
+        pdfIframe.style.display = 'block';
+    };
+    
+    pdfIframe.onerror = function() {
+        showPdfError();
+    };
+    
+    // Fallback timeout (jika load terlalu lama, kemungkinan error)
+    setTimeout(() => {
+        if (pdfLoading.style.display === 'flex') {
+            // Biarkan loading, browser akan handle jika memang bisa
+            // Atau gunakan showPdfError() jika ingin memaksa error setelah timeout
+        }
+    }, 10000);
+}
+
+function showPdfError() {
+    pdfLoading.style.display = 'none';
+    pdfIframe.style.display = 'none';
+    pdfError.style.display = 'flex';
+}
+
+function closePdfViewer() {
+    pdfModal.classList.remove('active');
+    document.body.style.overflow = '';
+    
+    // Clear iframe src to stop loading
+    setTimeout(() => {
+        pdfIframe.src = '';
+    }, 300);
+}
+
+// Event Listeners for PDF Modal
+if (pdfModalClose) {
+    pdfModalClose.addEventListener('click', closePdfViewer);
+}
+
+if (pdfModal) {
+    pdfModal.addEventListener('click', (e) => {
+        if (e.target === pdfModal) {
+            closePdfViewer();
+        }
+    });
 }
 
 /* ========================================
