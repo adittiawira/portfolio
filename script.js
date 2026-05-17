@@ -96,18 +96,7 @@ const certificatesData = [
         icon: 'bx-network-chart', // Ikon spesifik untuk Network
         pdf: 'assets/certificates/mtcna.pdf'
     },
-    {
-        title: 'Sertifikat PKL',
-        issuer: 'Central Technology Computer',
-        icon: 'bx-buildings', // Ikon spesifik untuk Perusahaan/PKL
-        pdf: 'assets/certificates/pkl.pdf'
-    },
-    {
-        title: 'Sertifikat kursus',
-        issuer: 'Aguna Course',
-        icon: 'bx-chalkboard', // Ikon spesifik untuk Workshop/Seminar
-        pdf: 'assets/certificates/workshop.pdf'
-    }
+    
 ];
 
 // PKL Gallery Data
